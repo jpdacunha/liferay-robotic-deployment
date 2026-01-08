@@ -1,0 +1,15 @@
+// Check GETTING_STARTED.md for information regarding usage.
+
+dependencies {
+    implementation 'junit:junit:4.13.2'
+    implementation 'org.hamcrest:hamcrest:2.2'
+
+    // Si Selenium est utilisé dans le code main (pas seulement les tests), bascule aussi:
+    implementation platform('org.seleniumhq.selenium:selenium-bom:4.23.0')
+    implementation 'org.seleniumhq.selenium:selenium-java'
+    implementation 'org.seleniumhq.selenium:selenium-support'
+}
+
+/* application {
+    mainClass = 'com.inetum.liferayroboticdeployment.Main'
+} */

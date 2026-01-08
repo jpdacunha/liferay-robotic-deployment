@@ -1,0 +1,10 @@
+{
+  "name": "rd-playwright",
+  "private": true,
+  "devDependencies": {
+    "@playwright/test": "1.57.0"
+  },
+  "scripts": {
+    "test": "playwright test"
+  }
+}

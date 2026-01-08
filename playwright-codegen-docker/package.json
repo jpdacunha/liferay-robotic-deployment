@@ -1,0 +1,11 @@
+{
+  "name": "playwright-codegen-docker",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test",
+    "codegen": "playwright codegen"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.57.0"
+  }
+}

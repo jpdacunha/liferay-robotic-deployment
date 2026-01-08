@@ -1,0 +1,98 @@
+services:
+  rd-liferay:
+    hostname: rd-liferay
+    image: liferay/dxp:2025.q1.19-lts
+    ports:
+      - 8080:8080
+    volumes:
+      - ./liferay/files:/mnt/liferay/files
+      - ./liferay/deploy:/mnt/liferay/deploy
+      - rd_liferay_data:/opt/liferay/data
+    depends_on:
+      rd-database:
+        condition: service_healthy
+      rd-elasticsearch:
+        condition: service_healthy
+    environment:
+      LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC LASS: org.postgresql.Driver
+      LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL: jdbc:postgresql://rd-database:5432/lportal
+      LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME: liferay
+      LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD: liferay
+    networks: 
+      - rd-network    
+
+  rd-elasticsearch:
+    hostname: rd-elasticsearch
+    build:
+      dockerfile: elasticsearch/Dockerfile
+      context: .
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+     - 9200:9200
+    volumes:
+      - rd_elasticsearch_data:/usr/share/elasticsearch/data
+    networks: 
+      - rd-network      
+    depends_on:
+      - fixsysctl
+      
+  fixsysctl:
+    restart: "no"
+    privileged: true
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 25m
+    image: centos:7
+    command: "sysctl -w vm.max_map_count=262144"
+
+  rd-database:
+    hostname: rd-database
+    image: postgres:15
+    environment:
+      POSTGRES_DB: lportal
+      POSTGRES_USER: liferay
+      POSTGRES_PASSWORD: liferay
+    ports:
+      - 5432:5432
+    volumes:
+      - rd_database_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U liferay -d lportal"]
+      interval: 5s
+      timeout: 2s
+      retries: 5
+      start_period: 10s
+    networks: 
+      - rd-network    
+      
+  rd-playwright:
+    image: mcr.microsoft.com/playwright:v1.57.0-jammy
+    container_name: rd-playwright
+    working_dir: /app
+    volumes:
+      - ./playwright:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=${DISPLAY}
+      - BASE_URL=http://rd-liferay:8080
+    networks:
+      - rd-network
+    stdin_open: true
+    tty: true
+    depends_on:
+      rd-liferay:
+        condition: service_started
+        
+volumes:
+  rd_liferay_data:
+  rd_elasticsearch_data:
+  rd_database_data:
+
+networks:
+  rd-network:
+    name: rd-network
