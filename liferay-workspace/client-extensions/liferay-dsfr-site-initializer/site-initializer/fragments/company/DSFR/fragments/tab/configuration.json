@@ -1,0 +1,39 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "  dist/legacy/legacy.nomodule.min.js,dist/core/core.module.min.js,dist/core/core.nomodule.min.js,dist/component/tab/tab.module.min.js,dist/component/tab/tab.nomodule.min.js",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/tab/tab.css,dist/utility/utility.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},
+		{
+			"fields": [
+				{
+					"dataType": "int",
+					"defaultValue": "3",
+					"label": "Nombre de panneaux",
+					"name": "numberOfTabs",
+					"type": "text",
+					"typeOptions": {
+						"validation": {
+							"min": 1,
+							"type": "number"
+						}
+					}
+				}
+			],
+			"label": "tab-options"
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/callout/callout.css,dist/component/button/button.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},{
+			"fields": [
+				{
+          "defaultValue": false,
+          "label": "Add Title",
+          "name": "addTitle",
+          "type": "checkbox"
+        },
+				{
+          "defaultValue": false,
+          "label": "Add Button",
+          "name": "addButton",
+          "type": "checkbox"
+        },
+				{
+          "defaultValue": false,
+          "label": "Emphasis",
+          "name": "emphasis",
+          "type": "checkbox"
+        }
+				],
+			"label": "callout-options"
+		}
+	]
+}

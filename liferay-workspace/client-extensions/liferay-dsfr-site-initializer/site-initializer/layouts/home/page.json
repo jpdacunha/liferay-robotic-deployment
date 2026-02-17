@@ -1,0 +1,11 @@
+{
+	"friendlyURL": "/home",
+	"hidden": false,
+	"name_i18n": {
+		"en_US": "Ministère de la Justice"
+	},
+	"priority": 0,
+	"private": false,
+	"system": false,
+	"type": "Content"
+}

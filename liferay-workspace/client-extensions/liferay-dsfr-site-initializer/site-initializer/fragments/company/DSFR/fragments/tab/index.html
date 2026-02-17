@@ -1,0 +1,23 @@
+<div class="fr-tabs">
+    <ul class="fr-tabs__list" role="tablist" aria-label="[A modifier | nom du système d'onglet]">
+        [#list 0..configuration.numberOfTabs-1 as i]
+        <li role="presentation">
+            <button id="tabpanel-${fragmentEntryLinkNamespace}-${i}" data-lfr-editable-id="${i}-label1" data-lfr-editable-type="rich-text"
+                class="fr-tabs__tab fr-icon-checkbox-circle-line fr-tabs__tab--icon-left" tabindex="0" role="tab"
+                aria-selected="true" aria-controls="tabpanel-${i}-panel-${fragmentEntryLinkNamespace}">
+                Libellé onglet ${i}
+            </button>
+        </li>
+        [/#list]
+    </ul>
+    [#list 0..configuration.numberOfTabs-1 as i]
+    <div data-lfr-editable-id="${i}-content" data-lfr-editable-type="rich-text"
+        id="tabpanel-${i}-panel-${fragmentEntryLinkNamespace}" class="fr-tabs__panel fr-tabs__panel--selected"
+        role="tabpanel" aria-labelledby="tabpanel-${fragmentEntryLinkNamespace}-${i}" tabindex="0">
+        <p>
+            write your content ${i}
+        </p>
+    </div>
+    [/#list]
+
+</div>

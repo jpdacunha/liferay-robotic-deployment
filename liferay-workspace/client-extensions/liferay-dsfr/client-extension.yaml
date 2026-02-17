@@ -1,0 +1,30 @@
+assemble:
+  - from: build/buildTheme/img
+    into: static/img
+  - from: build/buildTheme/dsfr
+    into: static/dsfr
+  - from: src/dsfr/dist/favicon
+    hashify: favicon.ico
+    into: static
+
+liferay-dsfr:
+  clayURL: css/clay.css
+  mainURL: css/main.css
+  name: Liferay DSFR Theme CSS
+  type: themeCSS
+
+liferay-dsfr-global-js:
+  name: Liferay DSFR Global JS
+  scriptElementAttributes:
+    async: true
+    data-attribute: "value"
+    data-senna-track: "permanent"
+    fetchpriority: "low"
+    type: "module"
+  type: globalJS
+  url: dsfr/dist/dsfr.module.min.js
+
+liferay-dsfr-theme-favicon:
+    name: Liferay DSFR Theme Favicon
+    type: themeFavicon
+    url: /dsfr/dist/favicon/favicon.ico

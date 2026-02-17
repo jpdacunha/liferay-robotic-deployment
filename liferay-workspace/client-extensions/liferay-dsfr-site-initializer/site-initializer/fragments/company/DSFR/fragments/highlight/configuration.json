@@ -1,0 +1,68 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/highlight/highlight.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},{   
+	      "fields": [
+		      {
+					   "dataType": "string",
+					   "defaultValue": "",
+					   "label": "Highlight Size",
+					   "name": "highlightSize",
+					   "type": "select",
+					   "typeOptions": {
+						   "validValues": [
+							    {
+										"label": "Small",
+								    "value": "class=\"fr-text--sm\""
+								    
+							    },
+								  {
+								     "label": "Medium",
+								     "value": ""
+							    },
+								  {
+								     "label": "Large",
+								     "value": "class=\"fr-text--lg\""
+							    }
+						     ]
+					}
+				 },{
+					   "dataType": "string",
+					   "defaultValue": "",
+					   "label": "Highlight Style",
+					   "name": "highlightStyle",
+					   "type": "select",
+					   "typeOptions": {
+						   "validValues": [
+							    {
+										"label": "Default",
+								    "value": ""
+								    
+							    },
+								  {
+								     "label": "Accentuated",
+								     "value": "fr-highlight--green-emeraude"
+							    }
+						     ]
+					}
+				 }
+		  ],
+				"label": "highlight-options"
+			}
+	]
+}

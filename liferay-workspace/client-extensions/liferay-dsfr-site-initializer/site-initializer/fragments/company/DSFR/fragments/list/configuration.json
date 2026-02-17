@@ -1,0 +1,38 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "dataType": "int",
+                    "defaultValue": "1",
+                    "label": "number-Of-Items",
+                    "name": "numberOfItems",
+                    "type": "text",
+                    "typeOptions": {
+                        "validation": {
+                            "min": 1,
+                            "type": "number"
+                        }
+                    }
+                },
+                {
+                    "name": "alignement",
+                    "label": "alignement",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {
+                                "value": "flex-row"
+                            },
+                            {
+                                "value": "flex-column"
+                            }
+                        ]
+                    },
+                    "defaultValue": "flex-row"
+                }
+            ]
+        }
+    ]
+}

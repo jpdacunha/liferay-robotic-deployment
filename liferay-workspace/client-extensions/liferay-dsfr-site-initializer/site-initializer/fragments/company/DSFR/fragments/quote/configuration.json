@@ -1,0 +1,72 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/quote/quote.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},
+		{   
+	      "fields": [
+		      {
+					   "dataType": "string",
+					   "defaultValue": "",
+					   "label": "Quote Size",
+					   "name": "quoteSize",
+					   "type": "select",
+					   "typeOptions": {
+						   "validValues": [
+							    {
+										"label": "xLarge-default",
+								    "value": ""
+								    
+							    },
+								  {
+								     "label": "Large",
+								     "value": "class=\"fr-text--lg\""
+							    }
+						     ]
+					}
+				 },
+					{
+					   "dataType": "string",
+					   "defaultValue": "",
+					   "label": "Quote Options",
+					   "name": "quoteOption",
+					   "type": "select",
+					   "typeOptions": {
+						   "validValues": [
+							    {
+										"label": "Quote withouot image",
+								    "value": ""
+								    
+							    },
+								  {
+								     "label": "Accented quote",
+								     "value": "fr-quote--green-emeraude"
+							    }
+						     ]
+					}
+				 },
+				{
+          "defaultValue": false,
+          "label": "Add image",
+          "name": "addImage",
+          "type": "checkbox"
+        }
+		  ],
+				"label": "quote-style"
+			}
+	]
+}

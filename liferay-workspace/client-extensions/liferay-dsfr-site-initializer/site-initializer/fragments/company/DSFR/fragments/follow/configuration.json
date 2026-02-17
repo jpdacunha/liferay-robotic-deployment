@@ -1,0 +1,46 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/follow/follow.css,dist/component/input/input.css,dist/component/form/form.css,dist/component/button/button.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},
+		{   
+	      "fields": [
+		      {
+					   "dataType": "string",
+					   "defaultValue": "Complete-newsletter",
+					   "label": "Newsletter Option",
+					   "name": "newsletterOption",
+					   "type": "select",
+					   "typeOptions": {
+						   "validValues": [
+							    {
+								    "value": "Social-networks-only"  
+							    },
+								  {
+								     "value": "Newsletter-only"
+							    },
+								  {
+								     "value": "Complete-newsletter"
+							    }
+						     ]
+					}
+				 }
+		  ],
+				"label": "newsletter-style"
+			}
+	]
+}
