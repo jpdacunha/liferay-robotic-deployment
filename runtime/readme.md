@@ -45,6 +45,7 @@ Lancer playwright en mode interactif :
 ## Enregistrer un scénario
 Enregistrer un scénario Liferay (codegen) :
 ```bash
+npm install
 npx playwright codegen http://rd-liferay:8080
 ```
 
@@ -53,7 +54,6 @@ Copier le code généré dans tests/*.spec.ts
 
 ## Rejouer sur un environnement
 ```bash
-npm install
 npx playwright test
 ```
 
