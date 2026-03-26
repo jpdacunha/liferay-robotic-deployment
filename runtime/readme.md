@@ -30,14 +30,9 @@ update-alternatives --config java
 	echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> ~/.bashrc
 	source ~/.bashrc
 ```
-## 4.Installation de docker sous wsl ou activer l'intégration wsl dans docker desktop (depuis son Windows) :  
-	1- Ouvrir Docker desktop et aller dans Settings => Resources => WSL integration
-	2- Cocher "Enable integration with my default WSL distro" et activer le toggle en dessous avec le distribution Ubuntu
-	3- Dans un terminal : killer wsl : 
-  ```bash
-  wsl --shutdown
+## 4.Installation de docker sous wsl :
   ```
-	4- Relancer wsl et vérifier la version de docker : 
+	Vérifier la version de docker : 
     ```bash
     docker -version
     docker ps
