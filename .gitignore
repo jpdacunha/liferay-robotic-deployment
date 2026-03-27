@@ -1,3 +1,5 @@
 /.metadata/
 runtime/playwright/node_modules/
 /RemoteSystemsTempFiles/
+runtime/playwright/test-results/*
+!runtime/playwright/test-results/.gitkeep
