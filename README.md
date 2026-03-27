@@ -71,6 +71,8 @@ Follow these steps to get started with Liferay Robotic Deployment:
 
 All project operations must be executed through `manage.sh` only.
 
+Runtime-related scripts are grouped under `scripts/runtime/`, including Playwright scripts in `scripts/runtime/playwright/`.
+
 ### 0. Script documentation (required)
 
 Use this command to display all available commands and categories:
