@@ -47,14 +47,43 @@ docker -version
 docker ps
 ```
 
-### 5) Give execute permissions to scripts
+### 5) Install/Update Node.js with NVM (required: Node.js > 18)
+
+Node.js version must be strictly greater than 18.
+`npx` is required to run Playwright tooling and is provided by `npm`.
+
+Install NVM:
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+source ~/.bashrc
+```
+
+Install and use a compatible Node.js version (LTS recommended):
+
+```sh
+nvm install --lts
+nvm use --lts
+nvm alias default lts/*
+node -v
+npx --version
+```
+
+If Node.js is already installed and below 19, keep using NVM and run:
+
+```sh
+nvm install --lts
+nvm use --lts
+```
+
+### 6) Give execute permissions to scripts
 
 ```sh
 cd liferay-robotic-deployment
 chmod +x manage.sh
 ```
 
-### 6) Ensure Gradle wrapper is executable
+### 7) Ensure Gradle wrapper is executable
 
 ```sh
 cd liferay-workspace
@@ -129,6 +158,8 @@ Playwright enables you to **record user scenarios** through the browser and **re
 - Docker
 - Docker Compose
 - Linux with X server
+- Node.js > 18 (managed with NVM)
+- npx (included with npm)
 
 ### Setup
 
