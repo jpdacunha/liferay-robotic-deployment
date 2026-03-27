@@ -1,0 +1,230 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/card/card.css,dist/component/tag/tag.css,dist/utility/utility.css,dist/component/badge/badge.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},
+		{
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Card Type",
+					"name": "cardType",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Card",
+								"value": ""
+							},
+							{
+								"label": "Download Card",
+								"value": "fr-card--download"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "fr-card--horizontal",
+					"label": "Card Layout",
+					"name": "cardLayout",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Horizontal Card",
+								"value": "fr-card--horizontal"
+							},
+							{
+								"label": "Vertical Card",
+								"value": ""
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Card Variation",
+					"name": "cardVariation",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Default",
+								"value": ""
+							},
+							{
+								"label": "Accentuated Aariation In Contrast Grey",
+								"value": "fr-card--grey"
+							},
+							{
+								"label": "Borderless Variation",
+								"value": "fr-card--no-border"
+							},
+							{
+								"label": "Variation Without Background",
+								"value": "fr-card--no-background"
+							},
+							{
+								"label": "Variation Drop Shadow",
+								"value": "fr-card--shadow"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Card Size",
+					"name": "cardSize",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Large",
+								"value": "fr-card--lg"
+							},
+							{
+								"label": "Medium",
+								"value": ""
+							},
+							{
+								"label": "Small",
+								"value": "fr-card--sm"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "imageSelected",
+					"label": "Card image Selection",
+					"name": "cardImage",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "With image",
+								"value": "imageSelected"
+							},
+							{
+								"label": "Without Image",
+								"value": ""
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "fr-ratio-32x9",
+					"label": "Image Aspect Ratio",
+					"name": "aspectRatio",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "32x9",
+								"value": "fr-ratio-32x9"
+							},
+							{
+								"label": "4x3",
+								"value": "fr-ratio-4x3"
+							},
+							{
+								"label": "1x1",
+								"value": "fr-ratio-fr-ratio-1x1"
+							},
+							{
+								"label": "3x4",
+								"value": "fr-ratio-3x4"
+							},
+							{
+								"label": "2x3",
+								"value": "fr-ratio-2x3"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "href=\"#\"",
+					"label": "Card Mode",
+					"name": "cardMode",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "enabled",
+								"value": "href=\"#\""
+							},
+							{
+								"label": "disabled",
+								"value": "aria-disabled=\"true\" role=\"link\""
+							}
+						]
+					}
+				},
+				{
+					"defaultValue": true,
+					"label": "Description",
+					"name": "cardDescription",
+					"type": "checkbox"
+				},
+				{
+					"defaultValue": true,
+					"label": "Details",
+					"name": "detailsOption",
+					"type": "checkbox"
+				},
+				{
+					"defaultValue": true,
+					"label": "Details with icon",
+					"name": "detailsIconOption",
+					"type": "checkbox"
+				},
+				{
+					"defaultValue": true,
+					"label": "Badges",
+					"name": "badgeOption",
+					"type": "checkbox"
+				},
+				{
+					"defaultValue": false,
+					"label": "Tags",
+					"name": "tagOption",
+					"type": "checkbox"
+				},
+				{
+					"dataType": "int",
+					"defaultValue": "1",
+					"label": "number-of-tags-or-badge",
+					"name": "numberOfTags",
+					"type": "text",
+					"typeOptions": {
+						"validation": {
+							"min": 1,
+							"type": "number"
+						}
+					}
+				}
+			],
+			"label": "card-options"
+		}
+	]
+}

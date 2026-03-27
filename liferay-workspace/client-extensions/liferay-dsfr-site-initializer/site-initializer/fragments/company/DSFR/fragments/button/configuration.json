@@ -1,0 +1,363 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/utility/utility.css,dist/component/button/button.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},
+		{
+			"configurationRole": "style",
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Button Style",
+					"name": "buttonType",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Primary",
+								"value": ""
+							},
+							{
+								"label": "Secondary",
+								"value": "fr-btn--secondary"
+							},
+							{
+								"label": "Tertiary",
+								"value": "fr-btn--tertiary"
+							},
+							{
+								"label": "Tertiary button without outline",
+								"value": "fr-btn--tertiary-no-outline"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Button State",
+					"name": "buttonOption",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "enabled button",
+								"value": ""
+							},
+							{
+								"label": "Disabled button",
+								"value": "disabled"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Button Icon",
+					"name": "buttonIcon",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Without icon",
+								"value": ""
+							},
+							{
+								"label": "icon-article",
+								"value": "fr-icon-article-line"
+							},
+							{
+								"label": "icon-book-2",
+								"value": "fr-icon-book-2-line"
+							},
+							{
+								"label": "icon-booklet",
+								"value": "fr-icon-booklet-line"
+							},
+							{
+								"label": "icon-clipboard",
+								"value": "fr-icon-clipboard-line"
+							},
+							{
+								"label": "icon-draft",
+								"value": "fr-icon-draft-line"
+							},
+							{
+								"label": "icon-file-add",
+								"value": "fr-icon-file-add-line"
+							},
+							{
+								"label": "icon-file-download",
+								"value": "fr-icon-file-download-line"
+							},
+							{
+								"label": "icon-file",
+								"value": "fr-icon-file-line"
+							},
+							{
+								"label": "icon-file-pdf",
+								"value": "fr-icon-file-pdf-line"
+							},
+							{
+								"label": "icon-file-text",
+								"value": "fr-icon-file-text-line"
+							},
+							{
+								"label": "icon-folder-2",
+								"value": "fr-icon-folder-2-line"
+							},
+							{
+								"label": "icon-newspaper",
+								"value": "fr-icon-newspaper-line"
+							},
+							{
+								"label": "icon-survey",
+								"value": "fr-icon-survey-line"
+							},
+							{
+								"label": "icon-todo",
+								"value": "fr-icon-todo-line"
+							},
+							{
+								"label": "icon-account-circle",
+								"value": "fr-icon-account-circle-line"
+							},
+							{
+								"label": "icon-account",
+								"value": "fr-icon-account-line"
+							},
+							{
+								"label": "icon-account-pin-circle",
+								"value": "fr-icon-account-pin-circle-line"
+							},
+							{
+								"label": "icon-admin",
+								"value": "fr-icon-admin-line"
+							},
+							{
+								"label": "icon-group",
+								"value": "fr-icon-group-line"
+							},
+							{
+								"label": "icon-parent",
+								"value": "fr-icon-parent-line"
+							},
+							{
+								"label": "icon-team",
+								"value": "fr-icon-team-line"
+							},
+							{
+								"label": "icon-user-add",
+								"value": "fr-icon-user-add-line"
+							},
+							{
+								"label": "icon-user",
+								"value": "fr-icon-user-line"
+							},
+							{
+								"label": "icon-user-heart",
+								"value": "fr-icon-user-heart-line"
+							},
+							{
+								"label": "icon-user-search",
+								"value": "fr-icon-user-search-line"
+							},
+							{
+								"label": "icon-user-setting",
+								"value": "fr-icon-user-setting-line"
+							},
+							{
+								"label": "icon-user-star",
+								"value": "fr-icon-user-star-line"
+							},
+							{
+								"label": "icon-chrome",
+								"value": "fr-icon-chrome-line"
+							},
+							{
+								"label": "icon-edge",
+								"value": "fr-icon-edge-line"
+							},
+							{
+								"label": "icon-facebook-circle",
+								"value": "fr-icon-facebook-circle-line"
+							},
+							{
+								"label": "icon-firefox",
+								"value": "fr-icon-firefox-line"
+							},
+							{
+								"label": "icon-github",
+								"value": "fr-icon-github-line"
+							},
+							{
+								"label": "icon-google",
+								"value": "fr-icon-google-line"
+							},
+							{
+								"label": "icon-ie",
+								"value": "fr-icon-ie-line"
+							},
+							{
+								"label": "icon-instagram",
+								"value": "fr-icon-instagram-line"
+							},
+							{
+								"label": "icon-linkedin-box",
+								"value": "fr-icon-linkedin-box-line"
+							},
+							{
+								"label": "icon-mastodon",
+								"value": "fr-icon-mastodon-line"
+							},
+							{
+								"label": "icon-npmjs",
+								"value": "fr-icon-npmjs-line"
+							},
+							{
+								"label": "icon-remixicon",
+								"value": "fr-icon-remixicon-line"
+							},
+							{
+								"label": "icon-safari",
+								"value": "fr-icon-safari-line"
+							},
+							{
+								"label": "icon-slack",
+								"value": "fr-icon-slack-line"
+							},
+							{
+								"label": "icon-snapchat",
+								"value": "fr-icon-snapchat-line"
+							},
+							{
+								"label": "icon-telegram",
+								"value": "fr-icon-telegram-line"
+							},
+							{
+								"label": "icon-twitch",
+								"value": "fr-icon-twitch-line"
+							},
+							{
+								"label": "icon-twitter-x",
+								"value": "fr-icon-twitter-x-line"
+							},
+							{
+								"label": "icon-threads",
+								"value": "fr-icon-threads-line"
+							},
+							{
+								"label": "icon-twitter",
+								"value": "fr-icon-twitter-line"
+							},
+							{
+								"label": "icon-vimeo",
+								"value": "fr-icon-vimeo-line"
+							},
+							{
+								"label": "icon-vuejs",
+								"value": "fr-icon-vuejs-line"
+							},
+							{
+								"label": "icon-whatsapp",
+								"value": "fr-icon-whatsapp-line"
+							},
+							{
+								"label": "icon-youtube",
+								"value": "fr-icon-youtube-line"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Button Icon Position",
+					"name": "buttonIconPosition",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Without icon",
+								"value": ""
+							},
+							{
+								"label": "Icon on the right",
+								"value": "fr-btn--icon-right"
+							},
+							{
+								"label": "Icon on the left",
+								"value": "fr-btn--icon-left"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Button Size",
+					"name": "buttonSize",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Medium",
+								"value": ""
+							},
+							{
+								"label": "Small",
+								"value": "fr-btn--sm"
+							},
+							{
+								"label": "Large",
+								"value": "fr-btn--lg"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "External Link ",
+					"name": "linkChoice",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Default",
+								"value": ""
+							},
+							{
+								"label": "Add external link",
+								"value": "target=\"_blank\""
+							}
+						]
+					}
+				},
+				{
+					"defaultValue": "0.875rem",
+					"label": "size",
+					"name": "size",
+					"type": "length"
+				}
+			],
+			"label": "button-option"
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "  dist/legacy/legacy.nomodule.min.js,dist/core/core.module.min.js,dist/core/core.nomodule.min.js,dist/component/modal/modal.module.min.js,dist/component/modal/modal.nomodule.min.js",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/transcription/transcription.css,dist/component/button/button.css,dist/component/modal/modal.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		}
+	]
+}

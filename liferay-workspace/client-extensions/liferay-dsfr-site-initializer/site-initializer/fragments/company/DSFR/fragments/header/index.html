@@ -1,0 +1,196 @@
+<header role="banner" class="fr-header">
+    <div class="fr-header__body">
+        <div class="fr-container">
+            <div class="fr-header__body-row">
+                <div class="fr-header__brand fr-enlarge-link">
+                    <div class="fr-header__brand-top">
+                        <div class="fr-header__logo">
+                            <p data-lfr-editable-id="title" data-lfr-editable-type="rich-text" class="fr-logo">
+                                Intitulé
+                                <br>officiel
+                            </p>
+                        </div>
+                        <div class="fr-header__navbar">
+													[#if configuration.headerStyle == 'full']
+													<button data-fr-opened="false" aria-controls="modal-2750" id="button-2751" title="Rechercher" class="fr-btn--search fr-btn">Rechercher</button>
+                   				[/#if]
+                            <button data-fr-opened="false" aria-controls="modal-2568" id="button-2569" title="Menu" class="fr-btn--menu fr-btn">Menu</button>
+                        </div>
+                    </div>
+                    <div class="fr-header__service">
+                        <a href="/" title="Accueil - [À MODIFIER - Nom du site / service] - Nom de l’entité (ministère, secrétariat d‘état, gouvernement)">
+                            <p data-lfr-editable-id="site-name" data-lfr-editable-type="rich-text" class="fr-header__service-title">
+                                Nom du site / service
+                            </p>
+                        </a>
+                        <p data-lfr-editable-id="precision" data-lfr-editable-type="rich-text" class="fr-header__service-tagline">baseline - précisions sur l‘organisation</p>
+                    </div>
+                </div>
+                <div class="fr-header__tools">
+                    <div class="fr-header__tools-links">
+											[#if configuration.headerStyle == 'oneShortcut']
+                        <a id="button-2570" data-lfr-editable-id="link" data-lfr-editable-type="link" href="[url - à modifier]" class="fr-btn--account fr-btn fr-btn">Espace particulier</a>
+                   		[/#if]
+											[#if configuration.headerStyle == 'shortcuts' || configuration.headerStyle == 'full' || configuration.headerStyle == 'language']
+											  <ul class="fr-btns-group">
+                            <li>
+                                <a id="button-2581" href="[url - à modifier]" data-lfr-editable-id="link1" data-lfr-editable-type="link" class="fr-btn--team fr-btn">Contact</a>
+                            </li>
+                            <li>
+                                <a id="button-2582" href="[url - à modifier]" data-lfr-editable-id="link2" data-lfr-editable-type="link" class="fr-btn--briefcase fr-btn">Espace recruteur</a>
+                            </li>
+                            <li>
+                                <a id="button-2583" href="[url - à modifier]" data-lfr-editable-id="link3" data-lfr-editable-type="link" class="fr-btn--account fr-btn">Espace particulier</a>
+                            </li>
+                        </ul>
+											[/#if]
+											[#if configuration.headerStyle == 'language']
+													<nav role="navigation" class="fr-translate fr-nav" id="translate-3080">
+																<div class="fr-nav__item">
+																		<button aria-controls="translate-3076" aria-expanded="false" title="Sélectionner une langue" id="button-3081" class="fr-translate__btn fr-btn">FR<span class="fr-hidden-lg">&nbsp;- Français</span>
+																		</button>
+																		<div class="fr-collapse fr-translate__menu fr-menu" id="translate-3076">
+																				<ul class="fr-menu__list">
+																						<li>
+																								<a class="fr-translate__language fr-nav__link" hreflang="fr" lang="fr" href="#" id="language-3082" aria-current="true">FR - Français</a>
+																						</li>
+																						<li>
+																								<a class="fr-translate__language fr-nav__link" hreflang="en" lang="en" href="#" id="language-3083">EN - English</a>
+																						</li>
+																						<li>
+																								<a class="fr-translate__language fr-nav__link" hreflang="es" lang="es" href="#" id="language-3084">ES - Español</a>
+																						</li>
+																						<li>
+																								<a class="fr-translate__language fr-nav__link" hreflang="de" lang="de" href="#" id="language-3085">DE - Deutsch</a>
+																						</li>
+																						<li>
+																								<a class="fr-translate__language fr-nav__link" hreflang="tr" lang="tr" href="#" id="language-3086">TR - Türkçe</a>
+																						</li>
+																						<li>
+																								<a class="fr-translate__language fr-nav__link" hreflang="ro" lang="ro" href="#" id="language-3087">RO - Română</a>
+																						</li>
+																				</ul>
+																		</div>
+																</div>
+														</nav>                   		
+											[/#if]
+									</div>
+									[#if configuration.headerStyle == 'full' ]
+									 <div class="fr-header__search fr-modal" id="modal-2750" aria-labelledby="button-2751">
+                        <div class="fr-container fr-container-lg--fluid">
+                            <button aria-controls="modal-2750" id="button-2758" title="Fermer" class="fr-btn--close fr-btn">Fermer</button>
+                            <div class="fr-search-bar" id="search-2749" role="search">
+                                <label class="fr-label" for="search-2749-input">
+                                    Rechercher
+                                </label>
+                                <input class="fr-input" aria-describedby="search-2749-input-messages" placeholder="Rechercher" id="search-2749-input" type="search">
+                                <div class="fr-messages-group" id="search-2749-input-messages" aria-live="polite">
+                                </div>
+                                <button id="search-btn-2760" title="Rechercher" class="fr-btn">Rechercher</button>
+                            </div>
+                        </div>
+                    </div>
+									[/#if]
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-2568" aria-labelledby="button-2569">
+        <div class="fr-container">
+            <button aria-controls="modal-2568" id="button-2571" title="Fermer" class="fr-btn--close fr-btn">Fermer</button>
+            <div class="fr-header__menu-links">
+            </div>
+					[#if configuration.headerStyle == 'full' || configuration.headerStyle == 'language']
+					  <ul class="fr-nav__list">
+                    <li class="fr-nav__item">
+                        <button data-lfr-editable-id="01-menu" data-lfr-editable-type="rich-text" class="fr-nav__btn" aria-expanded="false" aria-controls="collapse-2763">Entrée menu</button>
+                        <div class="fr-collapse fr-menu" id="collapse-2763">
+                            <ul class="fr-menu__list">
+                                <li>
+                                    <a class="fr-nav__link" href="#" id="nav-2764">Lien de navigation nav-2764</a>
+                                </li>
+                                <li>
+                                    <a class="fr-nav__link" href="#" id="nav-2765">Lien de navigation nav-2765</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="fr-nav__item">
+                        <button data-lfr-editable-id="02-menu" data-lfr-editable-type="rich-text" class="fr-nav__btn" aria-expanded="false" aria-controls="collapse-2773">Entrée mega menu</button>
+                        <div class="fr-collapse fr-mega-menu" id="collapse-2773">
+                            <div class="fr-container fr-container--fluid fr-container-lg">
+                                <div class="fr-grid-row fr-grid-row-lg--gutters">
+                                    <div class="fr-col-12 fr-mb-n3v">
+                                        <button aria-controls="collapse-2773" id="button-2909" title="Fermer" class="fr-btn--close fr-btn">Fermer</button>
+                                    </div>
+                                    <div class="fr-col-12 fr-col-lg-3">
+                                        <h5 class="fr-mega-menu__category">
+                                            <a class="fr-nav__link" href="#" id="category-2774">Nom de catégorie</a>
+                                        </h5>
+                                        <ul class="fr-mega-menu__list">
+                                            <li>
+                                                <a class="fr-nav__link" href="#" id="nav-2775">Lien de navigation nav-2775</a>
+                                            </li>
+                                            <li>
+                                                <a class="fr-nav__link" href="#" id="nav-2776">Lien de navigation nav-2776</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="fr-col-12 fr-col-lg-3">
+                                        <h5 class="fr-mega-menu__category">
+                                            <a class="fr-nav__link" href="#" id="category-2783">Nom de catégorie</a>
+                                        </h5>
+                                        <ul class="fr-mega-menu__list">
+                                            <li>
+                                                <a class="fr-nav__link" href="#" id="nav-2784">Lien de navigation nav-2784</a>
+                                            </li>
+                                            <li>
+                                                <a class="fr-nav__link" href="#" id="nav-2785">Lien de navigation nav-2785</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fr-nav__item">
+                        <a data-lfr-editable-id="03-menu" data-lfr-editable-type="link" class="fr-nav__link" href="#" id="nav-2810">accès direct nav-2810</a>
+                    </li>
+                    <li class="fr-nav__item">
+                        <button data-lfr-editable-id="04-menu" data-lfr-editable-type="rich-text" class="fr-nav__btn" aria-expanded="false" aria-controls="collapse-2812" aria-current="true">Entrée menu</button>
+                        <div class="fr-collapse fr-menu" id="collapse-2812">
+                            <ul class="fr-menu__list">
+                                <li>
+                                    <a class="fr-nav__link" href="#" id="nav-2813">Lien de navigation nav-2813</a>
+                                </li>
+                                <li>
+                                    <a class="fr-nav__link" href="#" id="nav-2814">Lien de navigation nav-2814</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="fr-nav__item">
+                        <button data-lfr-editable-id="05-menu" data-lfr-editable-type="rich-text" class="fr-nav__btn" aria-expanded="false" aria-controls="collapse-2822">Entrée mega menu</button>
+                        <div class="fr-collapse fr-mega-menu" id="collapse-2822">
+                            <div class="fr-container fr-container--fluid fr-container-lg">
+                                <div class="fr-grid-row fr-grid-row-lg--gutters">
+                                    <div class="fr-col-12 fr-mb-n3v">
+                                        <button aria-controls="collapse-2822" id="button-2910" title="Fermer" class="fr-btn--close fr-btn">Fermer</button>
+                                    </div>
+                                    <div class="fr-col-12 fr-col-lg-8 fr-col-offset-lg-4--right">
+                                        <div class="fr-mega-menu__leader">
+                                            <h4 class="fr-h4 fr-mb-2v">Titre éditorialisé</h4>
+                                            <p class="fr-hidden fr-unhidden-lg">Lorem [...] elit ut.</p>
+                                            <a id="link-2823" href="#" class="fr-link fr-icon-arrow-right-line fr-link--icon-right">Voir toute la rubrique</a>
+                                        </div>
+                                	</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>         
+                </ul>
+					[/#if]
+        </div>
+    </div>
+</header>

@@ -1,0 +1,50 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/share/share.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},
+		{
+			"fields": [
+				{
+          "defaultValue": false,
+          "label": "Disable link1",
+          "name": "disabledLink1",
+          "type": "checkbox"
+        },
+				{
+          "defaultValue": false,
+          "label": "Disabled Link2",
+          "name": "disabledLink2",
+          "type": "checkbox"
+        },
+				{
+          "defaultValue": false,
+          "label": "Disabled Link3",
+          "name": "disabledLink3",
+          "type": "checkbox"
+        },
+				{
+          "defaultValue": false,
+          "label": "Disabled Link4",
+          "name": "disabledLink4",
+          "type": "checkbox"
+        }
+			],
+			"label": "Social-option"
+		}
+	]
+}

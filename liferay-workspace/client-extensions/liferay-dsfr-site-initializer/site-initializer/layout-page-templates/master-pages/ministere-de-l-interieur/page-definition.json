@@ -1,0 +1,1268 @@
+{
+    "pageElement": {
+        "id": "aa47e5b1-8388-6f48-061b-39edcfee6bf1",
+        "pageElements": [
+            {
+                "definition": {
+                    "indexed": true,
+                    "layout": {},
+                    "name": "HEADER"
+                },
+                "id": "5d38c657-6155-d406-b983-c0734bc6cc18",
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragmentStyle": {
+                                "paddingBottom": "4",
+                                "paddingTop": "4"
+                            },
+                            "htmlProperties": {
+                                "htmlTag": "Header"
+                            },
+                            "indexed": true,
+                            "layout": {
+                                "paddingBottom": 2,
+                                "paddingTop": 2
+                            }
+                        },
+                        "id": "72e753d1-3450-dc3c-ee7f-1b6f4b7abf52",
+                        "pageElements": [
+                            {
+                                "definition": {
+                                    "fragmentStyle": {
+                                        "maxWidth": "78rem",
+                                        "paddingLeft": "4",
+                                        "paddingRight": "4",
+                                        "width": "100%"
+                                    },
+                                    "indexed": true,
+                                    "layout": {
+                                        "contentDisplay": "FlexRow",
+                                        "justify": "SpaceBetween",
+                                        "paddingLeft": 2,
+                                        "paddingRight": 2,
+                                        "widthType": "Fixed"
+                                    }
+                                },
+                                "id": "9ff00ce4-4b12-bb9a-3b15-aeb4dc0746a7",
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "logo"
+                                            },
+                                            "fragmentConfig": {
+                                                "requiredCss": "dist/component/logo/logo.css",
+                                                "size": "0.7875rem",
+                                                "logoSize": "fr-logo--lg",
+                                                "requiredJs": ""
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "official-label",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "MINISTERE DE L'INTéRIEUR"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "fragmentStyle": {
+                                                "paddingBottom": "3",
+                                                "paddingLeft": "3",
+                                                "paddingRight": "3",
+                                                "paddingTop": "3"
+                                            },
+                                            "indexed": true
+                                        },
+                                        "id": "3505b681-b988-6725-7d4f-038efe8f4eca",
+                                        "type": "Fragment"
+                                    },
+                                    {
+                                        "definition": {
+                                            "indexed": true,
+                                            "layout": {
+                                                "align": "End",
+                                                "contentDisplay": "FlexColumn"
+                                            }
+                                        },
+                                        "id": "fc84a043-23a1-3406-cd9b-85e0f9963cfa",
+                                        "pageElements": [
+                                            {
+                                                "definition": {
+                                                    "fragment": {
+                                                        "key": "list"
+                                                    },
+                                                    "fragmentConfig": {
+                                                        "numberOfItems": 1,
+                                                        "alignement": "flex-row"
+                                                    },
+                                                    "fragmentFields": [],
+                                                    "fragmentStyle": {
+                                                        "marginBottom": "3"
+                                                    },
+                                                    "indexed": true
+                                                },
+                                                "id": "4d3abd2d-8861-e87c-3936-7b3afd5ff1e2",
+                                                "pageElements": [
+                                                    {
+                                                        "definition": {
+                                                            "fragmentDropZoneId": "0"
+                                                        },
+                                                        "id": "e6709db9-0483-8e29-556d-75264842b29e",
+                                                        "pageElements": [
+                                                            {
+                                                                "definition": {
+                                                                    "fragment": {
+                                                                        "key": "button"
+                                                                    },
+                                                                    "fragmentConfig": {
+                                                                        "requiredCss": "dist/utility/utility.css,dist/component/button/button.css",
+                                                                        "linkChoice": "",
+                                                                        "buttonIcon": "fr-icon-user-setting-line",
+                                                                        "buttonType": "fr-btn--tertiary-no-outline",
+                                                                        "size": "",
+                                                                        "buttonOption": "",
+                                                                        "buttonIconPosition": "fr-btn--icon-left",
+                                                                        "requiredJs": "",
+                                                                        "buttonSize": ""
+                                                                    },
+                                                                    "fragmentFields": [
+                                                                        {
+                                                                            "id": "libelle",
+                                                                            "value": {
+                                                                                "fragmentLink": {},
+                                                                                "text": {
+                                                                                    "value_i18n": {
+                                                                                        "en_US": "Paramètre d'affichage"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "indexed": true
+                                                                },
+                                                                "id": "a3c22611-aa1b-7cfc-23e7-2e76c7ff0433",
+                                                                "type": "Fragment"
+                                                            }
+                                                        ],
+                                                        "type": "FragmentDropZone"
+                                                    }
+                                                ],
+                                                "type": "Fragment"
+                                            },
+                                            {
+                                                "definition": {
+                                                    "fragment": {
+                                                        "key": "search"
+                                                    },
+                                                    "fragmentConfig": {
+                                                        "requiredCss": "dist/component/search/search.css,dist/utility/utility.css,dist/component/input/input.css,dist/component/button/button.css,dist/component/form/form.css",
+                                                        "buttonStyle": "",
+                                                        "placeholder": "Rechercher",
+                                                        "requiredJs": ""
+                                                    },
+                                                    "fragmentFields": [
+                                                        {
+                                                            "id": "label",
+                                                            "value": {
+                                                                "fragmentLink": {}
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "search-button",
+                                                            "value": {
+                                                                "fragmentLink": {}
+                                                            }
+                                                        }
+                                                    ],
+                                                    "fragmentStyle": {
+                                                        "maxWidth": "368px",
+                                                        "width": "100%"
+                                                    },
+                                                    "indexed": true
+                                                },
+                                                "id": "fe9bd5e5-d69b-2aea-f4fb-196e06ba3f91",
+                                                "type": "Fragment"
+                                            }
+                                        ],
+                                        "type": "Section"
+                                    }
+                                ],
+                                "type": "Section"
+                            }
+                        ],
+                        "type": "Section"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "BASIC_COMPONENT-separator"
+                            },
+                            "fragmentConfig": {
+                                "separatorColor": "secondary",
+                                "bottomSpacing": "1"
+                            },
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "id": "13d449ad-f395-8318-7b9d-fdd092da7b4c",
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragmentStyle": {
+                                "maxWidth": "78rem",
+                                "paddingLeft": "4",
+                                "paddingRight": "4",
+                                "width": "100%"
+                            },
+                            "indexed": true,
+                            "layout": {
+                                "paddingLeft": 2,
+                                "paddingRight": 2,
+                                "widthType": "Fixed"
+                            }
+                        },
+                        "id": "22509dd5-4dc7-8685-cabd-2b6c99cf32d1",
+                        "pageElements": [
+                            {
+                                "definition": {
+                                    "widgetInstance": {
+                                        "widgetConfig": {
+                                            "siteNavigationMenuId": "0",
+                                            "displayStyle": "ddmTemplate_DSFR_NAVIGATION",
+                                            "displayDepth": "0",
+                                            "displayStyleGroupKey": "Liferay DSFR",
+                                            "siteNavigationMenuType": "-1",
+                                            "rootMenuItemType": "absolute",
+                                            "expandedLevels": "auto",
+                                            "rootMenuItemLevel": "0",
+                                            "displayStyleGroupId": "[$SCOPE_GROUP_ID$]"
+                                        },
+                                        "widgetName": "com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
+                                    }
+                                },
+                                "id": "50092039-c663-bee3-4c4f-9ae8b84c99e3",
+                                "type": "Widget"
+                            }
+                        ],
+                        "type": "Section"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "fragmentSettings": {
+                        "unallowedFragments": []
+                    }
+                },
+                "id": "b17b9f7a-00a5-1753-5562-82f30373f7cf",
+                "type": "DropZone"
+            },
+            {
+                "definition": {
+                    "indexed": true,
+                    "layout": {},
+                    "name": "Footer"
+                },
+                "id": "ead47f53-0270-5052-71ba-4525e268b47d",
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "follow"
+                            },
+                            "fragmentConfig": {
+                                "requiredCss": "dist/component/follow/follow.css,dist/component/input/input.css,dist/component/form/form.css,dist/component/button/button.css",
+                                "newsletterOption": "Social-networks-only",
+                                "requiredJs": ""
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "linkedIn-link",
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "[À MODIFIER - Lien vers le linkedin de l'organisation]"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "youtube-link",
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "[À MODIFIER - Lien vers le youtube de l'organisation]"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "facebook-link",
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "[À MODIFIER - Lien vers le facebook de l'organisation]"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "instagram-link",
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "[À MODIFIER - Lien vers l'instagram de l'organisation]"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "x-link",
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "[À MODIFIER - Lien vers le twitter de l'organisation]"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "social-media",
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "id": "fd75cf10-ef0f-3fd1-1113-4beba6c7670a",
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "BASIC_COMPONENT-separator"
+                            },
+                            "fragmentConfig": {
+                                "separatorColor": "info",
+                                "bottomSpacing": "1"
+                            },
+                            "fragmentFields": [],
+                            "fragmentStyle": {
+                                "backgroundColor": "#000091"
+                            },
+                            "indexed": true
+                        },
+                        "id": "ba15fe34-401b-4d3d-55be-5dca74b7e326",
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragmentStyle": {
+                                "paddingBottom": "4",
+                                "paddingTop": "4"
+                            },
+                            "indexed": true,
+                            "layout": {
+                                "paddingBottom": 2,
+                                "paddingTop": 2
+                            }
+                        },
+                        "id": "8b5c95b0-5c51-c5fe-429f-7161db0ba9af",
+                        "pageElements": [
+                            {
+                                "definition": {
+                                    "fragmentStyle": {
+                                        "maxWidth": "78rem",
+                                        "paddingLeft": "4",
+                                        "paddingRight": "4",
+                                        "width": "100%"
+                                    },
+                                    "indexed": true,
+                                    "layout": {
+                                        "align": "Center",
+                                        "contentDisplay": "FlexRow",
+                                        "justify": "SpaceBetween",
+                                        "paddingLeft": 2,
+                                        "paddingRight": 2,
+                                        "widthType": "Fixed"
+                                    }
+                                },
+                                "id": "1d2465eb-9b8f-251d-a483-eab010d4b90f",
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "logo"
+                                            },
+                                            "fragmentConfig": {
+                                                "requiredCss": "dist/component/logo/logo.css",
+                                                "size": "1.3125rem",
+                                                "logoSize": "fr-logo--lg",
+                                                "requiredJs": ""
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "official-label",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Ministere de l'INTÉRIEUR"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "fragmentStyle": {
+                                                "paddingBottom": "3",
+                                                "paddingRight": "3",
+                                                "paddingTop": "3"
+                                            },
+                                            "indexed": true
+                                        },
+                                        "id": "26b343b1-1913-1091-68cc-412e959d4b4a",
+                                        "type": "Fragment"
+                                    },
+                                    {
+                                        "definition": {
+                                            "indexed": true,
+                                            "layout": {}
+                                        },
+                                        "id": "bcc0eccc-81e3-0caa-32c9-d924947550c8",
+                                        "pageElements": [
+                                            {
+                                                "definition": {
+                                                    "indexed": true,
+                                                    "layout": {
+                                                        "contentDisplay": "FlexRow"
+                                                    }
+                                                },
+                                                "id": "e2aa05ca-2f24-9837-0436-1f9ac9f49042",
+                                                "pageElements": [
+                                                    {
+                                                        "definition": {
+                                                            "fragment": {
+                                                                "key": "list"
+                                                            },
+                                                            "fragmentConfig": {
+                                                                "numberOfItems": 4,
+                                                                "alignement": "flex-row"
+                                                            },
+                                                            "fragmentFields": [],
+                                                            "indexed": true
+                                                        },
+                                                        "id": "be067be1-fe47-f147-972d-4e79177aa4f6",
+                                                        "pageElements": [
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentDropZoneId": "0"
+                                                                },
+                                                                "id": "8b5a73be-a2fe-69ec-9ba3-db74a8797dca",
+                                                                "pageElements": [
+                                                                    {
+                                                                        "definition": {
+                                                                            "fragment": {
+                                                                                "key": "button"
+                                                                            },
+                                                                            "fragmentConfig": {
+                                                                                "requiredCss": "dist/utility/utility.css,dist/component/button/button.css",
+                                                                                "linkChoice": "target=\"_blank\"",
+                                                                                "buttonIcon": "",
+                                                                                "buttonType": "fr-btn--tertiary-no-outline",
+                                                                                "size": "",
+                                                                                "buttonOption": "",
+                                                                                "buttonIconPosition": "",
+                                                                                "requiredJs": "",
+                                                                                "buttonSize": ""
+                                                                            },
+                                                                            "fragmentFields": [
+                                                                                {
+                                                                                    "id": "libelle",
+                                                                                    "value": {
+                                                                                        "fragmentLink": {},
+                                                                                        "text": {
+                                                                                            "value_i18n": {
+                                                                                                "en_US": "data.gouv.fr"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "id": "00-libelle",
+                                                                                    "value": {
+                                                                                        "fragmentLink": {},
+                                                                                        "text": {
+                                                                                            "value_i18n": {
+                                                                                                "en_US": "data.gouv.fr"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "indexed": true
+                                                                        },
+                                                                        "id": "a80f5cfb-965f-9b54-cdcd-765ac61035cc",
+                                                                        "type": "Fragment"
+                                                                    }
+                                                                ],
+                                                                "type": "FragmentDropZone"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentDropZoneId": "1"
+                                                                },
+                                                                "id": "689ab6de-b21c-1359-551f-8ebe33ac74a6",
+                                                                "pageElements": [
+                                                                    {
+                                                                        "definition": {
+                                                                            "fragment": {
+                                                                                "key": "button"
+                                                                            },
+                                                                            "fragmentConfig": {
+                                                                                "requiredCss": "dist/utility/utility.css,dist/component/button/button.css",
+                                                                                "linkChoice": "target=\"_blank\"",
+                                                                                "buttonIcon": "",
+                                                                                "buttonType": "fr-btn--tertiary-no-outline",
+                                                                                "size": "",
+                                                                                "buttonOption": "",
+                                                                                "buttonIconPosition": "",
+                                                                                "requiredJs": "",
+                                                                                "buttonSize": ""
+                                                                            },
+                                                                            "fragmentFields": [
+                                                                                {
+                                                                                    "id": "libelle",
+                                                                                    "value": {
+                                                                                        "fragmentLink": {},
+                                                                                        "text": {
+                                                                                            "value_i18n": {
+                                                                                                "en_US": "info.gouv.fr"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "indexed": true
+                                                                        },
+                                                                        "id": "b834076c-e4db-0cbd-faa3-53f1c04ffb87",
+                                                                        "type": "Fragment"
+                                                                    }
+                                                                ],
+                                                                "type": "FragmentDropZone"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentDropZoneId": "2"
+                                                                },
+                                                                "id": "7f2e0478-a969-df01-8a35-818296e7c3f6",
+                                                                "pageElements": [
+                                                                    {
+                                                                        "definition": {
+                                                                            "fragment": {
+                                                                                "key": "button"
+                                                                            },
+                                                                            "fragmentConfig": {
+                                                                                "requiredCss": "dist/utility/utility.css,dist/component/button/button.css",
+                                                                                "linkChoice": "target=\"_blank\"",
+                                                                                "buttonIcon": "",
+                                                                                "buttonType": "fr-btn--tertiary-no-outline",
+                                                                                "size": "",
+                                                                                "buttonOption": "",
+                                                                                "buttonIconPosition": "",
+                                                                                "requiredJs": "",
+                                                                                "buttonSize": ""
+                                                                            },
+                                                                            "fragmentFields": [
+                                                                                {
+                                                                                    "id": "libelle",
+                                                                                    "value": {
+                                                                                        "fragmentLink": {},
+                                                                                        "text": {
+                                                                                            "value_i18n": {
+                                                                                                "en_US": "legifrance.gouv.fr"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "id": "00-libelle",
+                                                                                    "value": {
+                                                                                        "fragmentLink": {},
+                                                                                        "text": {
+                                                                                            "value_i18n": {
+                                                                                                "en_US": "legifrance.gouv.fr"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "indexed": true
+                                                                        },
+                                                                        "id": "121e3246-ce66-bd24-e254-222d078c8865",
+                                                                        "type": "Fragment"
+                                                                    }
+                                                                ],
+                                                                "type": "FragmentDropZone"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentDropZoneId": "3"
+                                                                },
+                                                                "id": "31e62d04-d78c-c3e0-7a7f-a97389fd90aa",
+                                                                "pageElements": [
+                                                                    {
+                                                                        "definition": {
+                                                                            "fragment": {
+                                                                                "key": "button"
+                                                                            },
+                                                                            "fragmentConfig": {
+                                                                                "requiredCss": "dist/utility/utility.css,dist/component/button/button.css",
+                                                                                "linkChoice": "target=\"_blank\"",
+                                                                                "buttonIcon": "",
+                                                                                "buttonType": "fr-btn--tertiary-no-outline",
+                                                                                "size": "",
+                                                                                "buttonOption": "",
+                                                                                "buttonIconPosition": "",
+                                                                                "requiredJs": "",
+                                                                                "buttonSize": ""
+                                                                            },
+                                                                            "fragmentFields": [
+                                                                                {
+                                                                                    "id": "libelle",
+                                                                                    "value": {
+                                                                                        "fragmentLink": {},
+                                                                                        "text": {
+                                                                                            "value_i18n": {
+                                                                                                "en_US": "service-public.fr"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "id": "00-libelle",
+                                                                                    "value": {
+                                                                                        "fragmentLink": {},
+                                                                                        "text": {
+                                                                                            "value_i18n": {
+                                                                                                "en_US": "service-public.fr"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "fragmentStyle": {
+                                                                                "fontSize": "14px",
+                                                                                "textColor": "#1C1C24"
+                                                                            },
+                                                                            "indexed": true
+                                                                        },
+                                                                        "id": "0e68fc8a-a7ad-f14b-171c-c23b19e59a41",
+                                                                        "type": "Fragment"
+                                                                    }
+                                                                ],
+                                                                "type": "FragmentDropZone"
+                                                            }
+                                                        ],
+                                                        "type": "Fragment"
+                                                    }
+                                                ],
+                                                "type": "Section"
+                                            }
+                                        ],
+                                        "type": "Section"
+                                    }
+                                ],
+                                "type": "Section"
+                            },
+                            {
+                                "definition": {
+                                    "fragmentStyle": {
+                                        "maxWidth": "78rem",
+                                        "width": "100%"
+                                    },
+                                    "indexed": true,
+                                    "layout": {
+                                        "widthType": "Fixed"
+                                    }
+                                },
+                                "id": "bd79f8be-d4cc-e03a-2f90-053bbd7688c0",
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "BASIC_COMPONENT-separator"
+                                            },
+                                            "fragmentConfig": {
+                                                "separatorColor": "secondary",
+                                                "bottomSpacing": "1"
+                                            },
+                                            "fragmentFields": [],
+                                            "fragmentStyle": {
+                                                "backgroundColor": ""
+                                            },
+                                            "indexed": true
+                                        },
+                                        "id": "405c077f-5be6-4190-7a01-8e909e61e607",
+                                        "type": "Fragment"
+                                    },
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "list"
+                                            },
+                                            "fragmentConfig": {
+                                                "numberOfItems": 6,
+                                                "alignement": "flex-row"
+                                            },
+                                            "fragmentFields": [],
+                                            "fragmentStyle": {
+                                                "paddingLeft": "4",
+                                                "paddingRight": "4"
+                                            },
+                                            "indexed": true
+                                        },
+                                        "id": "d107a07b-c7a8-2c25-dca4-b9e871ce7ee8",
+                                        "pageElements": [
+                                            {
+                                                "definition": {
+                                                    "fragmentDropZoneId": "0"
+                                                },
+                                                "id": "34e80112-d9e0-5f31-1070-a26980b4615a",
+                                                "pageElements": [
+                                                    {
+                                                        "definition": {
+                                                            "indexed": true,
+                                                            "layout": {
+                                                                "align": "Center",
+                                                                "contentDisplay": "FlexRow",
+                                                                "justify": "Center"
+                                                            }
+                                                        },
+                                                        "id": "1d59b177-d84d-3dcf-72bf-2137bcb194c8",
+                                                        "pageElements": [
+                                                            {
+                                                                "definition": {
+                                                                    "fragment": {
+                                                                        "key": "link"
+                                                                    },
+                                                                    "fragmentConfig": {
+                                                                        "requiredCss": "dist/utility/utility.css,dist/component/link/link.css",
+                                                                        "color": "var(--brand-color-4)",
+                                                                        "underline": "fr-footer__top-link",
+                                                                        "linkSize": "",
+                                                                        "linkMode": "href=\"#\"",
+                                                                        "linkType": "",
+                                                                        "fontSize": "0.75rem",
+                                                                        "requiredJs": "",
+                                                                        "title": ""
+                                                                    },
+                                                                    "fragmentFields": [
+                                                                        {
+                                                                            "id": "01-link",
+                                                                            "value": {
+                                                                                "fragmentLink": {
+                                                                                    "value": {
+                                                                                        "href": {
+                                                                                            "value": "#"
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "text": {
+                                                                                    "value_i18n": {
+                                                                                        "en_US": "Accessibilité : partiellement conforme"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "fragmentStyle": {
+                                                                        "paddingLeft": "2",
+                                                                        "paddingRight": "2"
+                                                                    },
+                                                                    "indexed": true
+                                                                },
+                                                                "id": "4cac7a69-bd1a-fc8f-d286-56b36ebc691a",
+                                                                "type": "Fragment"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentStyle": {
+                                                                        "backgroundColor": "gray300Color",
+                                                                        "height": "1rem",
+                                                                        "width": "1px"
+                                                                    },
+                                                                    "indexed": true,
+                                                                    "layout": {}
+                                                                },
+                                                                "id": "eb5c6cc5-ee84-8e1a-de13-6b23d4b37161",
+                                                                "type": "Section"
+                                                            }
+                                                        ],
+                                                        "type": "Section"
+                                                    }
+                                                ],
+                                                "type": "FragmentDropZone"
+                                            },
+                                            {
+                                                "definition": {
+                                                    "fragmentDropZoneId": "1"
+                                                },
+                                                "id": "de56cdd1-6bb5-5608-1d68-b849f38cd0cb",
+                                                "pageElements": [
+                                                    {
+                                                        "definition": {
+                                                            "indexed": true,
+                                                            "layout": {
+                                                                "align": "Center",
+                                                                "contentDisplay": "FlexRow",
+                                                                "justify": "Center"
+                                                            }
+                                                        },
+                                                        "id": "43d12893-4f39-aa9a-8f0e-c030d9d49912",
+                                                        "pageElements": [
+                                                            {
+                                                                "definition": {
+                                                                    "fragment": {
+                                                                        "key": "link"
+                                                                    },
+                                                                    "fragmentConfig": {
+                                                                        "requiredCss": "dist/utility/utility.css,dist/component/link/link.css",
+                                                                        "color": "var(--brand-color-4)",
+                                                                        "underline": "fr-footer__top-link",
+                                                                        "linkSize": "",
+                                                                        "linkMode": "href=\"#\"",
+                                                                        "linkType": "",
+                                                                        "fontSize": "0.75rem",
+                                                                        "requiredJs": "",
+                                                                        "title": ""
+                                                                    },
+                                                                    "fragmentFields": [
+                                                                        {
+                                                                            "id": "01-link",
+                                                                            "value": {
+                                                                                "fragmentLink": {
+                                                                                    "value": {
+                                                                                        "href": {
+                                                                                            "value": "#"
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "text": {
+                                                                                    "value_i18n": {
+                                                                                        "en_US": "Mentions légales"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "fragmentStyle": {
+                                                                        "paddingLeft": "2",
+                                                                        "paddingRight": "2"
+                                                                    },
+                                                                    "indexed": true
+                                                                },
+                                                                "id": "6c19171f-a3ae-7d1c-92ac-2347107785f1",
+                                                                "type": "Fragment"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentStyle": {
+                                                                        "backgroundColor": "gray300Color",
+                                                                        "height": "1rem",
+                                                                        "width": "1px"
+                                                                    },
+                                                                    "indexed": true,
+                                                                    "layout": {}
+                                                                },
+                                                                "id": "c7db8d09-1630-6985-fe8a-81b3e0785498",
+                                                                "type": "Section"
+                                                            }
+                                                        ],
+                                                        "type": "Section"
+                                                    }
+                                                ],
+                                                "type": "FragmentDropZone"
+                                            },
+                                            {
+                                                "definition": {
+                                                    "fragmentDropZoneId": "2"
+                                                },
+                                                "id": "b95c3fb5-3b52-1599-52e4-1d0e4aa098c1",
+                                                "pageElements": [
+                                                    {
+                                                        "definition": {
+                                                            "indexed": true,
+                                                            "layout": {
+                                                                "align": "Center",
+                                                                "contentDisplay": "FlexRow",
+                                                                "justify": "Center"
+                                                            }
+                                                        },
+                                                        "id": "2d499adc-57ce-42cf-bf5c-c8e1b13157b6",
+                                                        "pageElements": [
+                                                            {
+                                                                "definition": {
+                                                                    "fragment": {
+                                                                        "key": "link"
+                                                                    },
+                                                                    "fragmentConfig": {
+                                                                        "requiredCss": "dist/utility/utility.css,dist/component/link/link.css",
+                                                                        "color": "var(--brand-color-4)",
+                                                                        "underline": "fr-footer__top-link",
+                                                                        "linkSize": "",
+                                                                        "linkMode": "href=\"#\"",
+                                                                        "linkType": "",
+                                                                        "fontSize": "0.75rem",
+                                                                        "requiredJs": "",
+                                                                        "title": ""
+                                                                    },
+                                                                    "fragmentFields": [
+                                                                        {
+                                                                            "id": "01-link",
+                                                                            "value": {
+                                                                                "fragmentLink": {
+                                                                                    "value": {
+                                                                                        "href": {
+                                                                                            "value": "#"
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "text": {
+                                                                                    "value_i18n": {
+                                                                                        "en_US": "Données personnelles"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "fragmentStyle": {
+                                                                        "paddingLeft": "2",
+                                                                        "paddingRight": "2"
+                                                                    },
+                                                                    "indexed": true
+                                                                },
+                                                                "id": "b67473c0-b0cc-59b4-a2ca-3e0c84a3fb15",
+                                                                "type": "Fragment"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentStyle": {
+                                                                        "backgroundColor": "gray300Color",
+                                                                        "height": "1rem",
+                                                                        "width": "1px"
+                                                                    },
+                                                                    "indexed": true,
+                                                                    "layout": {}
+                                                                },
+                                                                "id": "7f2f32ac-8de8-991f-d7a1-b56d867c78fc",
+                                                                "type": "Section"
+                                                            }
+                                                        ],
+                                                        "type": "Section"
+                                                    }
+                                                ],
+                                                "type": "FragmentDropZone"
+                                            },
+                                            {
+                                                "definition": {
+                                                    "fragmentDropZoneId": "3"
+                                                },
+                                                "id": "f7778c22-1859-5c3a-3b87-48160b580d51",
+                                                "pageElements": [
+                                                    {
+                                                        "definition": {
+                                                            "indexed": true,
+                                                            "layout": {
+                                                                "align": "Center",
+                                                                "contentDisplay": "FlexRow",
+                                                                "justify": "Center"
+                                                            }
+                                                        },
+                                                        "id": "d24e4735-55de-a60b-fc08-55c701c5c6cc",
+                                                        "pageElements": [
+                                                            {
+                                                                "definition": {
+                                                                    "fragment": {
+                                                                        "key": "link"
+                                                                    },
+                                                                    "fragmentConfig": {
+                                                                        "requiredCss": "dist/utility/utility.css,dist/component/link/link.css",
+                                                                        "color": "var(--brand-color-4)",
+                                                                        "underline": "fr-footer__top-link",
+                                                                        "linkSize": "",
+                                                                        "linkMode": "href=\"#\"",
+                                                                        "linkType": "",
+                                                                        "fontSize": "0.75rem",
+                                                                        "requiredJs": "",
+                                                                        "title": ""
+                                                                    },
+                                                                    "fragmentFields": [
+                                                                        {
+                                                                            "id": "01-link",
+                                                                            "value": {
+                                                                                "fragmentLink": {
+                                                                                    "value": {
+                                                                                        "href": {
+                                                                                            "value": "#"
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "text": {
+                                                                                    "value_i18n": {
+                                                                                        "en_US": "Gestion des cookies"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "fragmentStyle": {
+                                                                        "paddingLeft": "2",
+                                                                        "paddingRight": "2"
+                                                                    },
+                                                                    "indexed": true
+                                                                },
+                                                                "id": "1cac584a-319f-c980-ee0c-48ff6b6880cf",
+                                                                "type": "Fragment"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentStyle": {
+                                                                        "backgroundColor": "gray300Color",
+                                                                        "height": "1rem",
+                                                                        "width": "1px"
+                                                                    },
+                                                                    "indexed": true,
+                                                                    "layout": {}
+                                                                },
+                                                                "id": "82be2c29-61cc-fe6a-6009-0562288fdc7a",
+                                                                "type": "Section"
+                                                            }
+                                                        ],
+                                                        "type": "Section"
+                                                    }
+                                                ],
+                                                "type": "FragmentDropZone"
+                                            },
+                                            {
+                                                "definition": {
+                                                    "fragmentDropZoneId": "4"
+                                                },
+                                                "id": "cd6574a7-0934-b9a6-39ff-45c742b537a2",
+                                                "pageElements": [
+                                                    {
+                                                        "definition": {
+                                                            "indexed": true,
+                                                            "layout": {
+                                                                "align": "Center",
+                                                                "contentDisplay": "FlexRow",
+                                                                "justify": "Center"
+                                                            }
+                                                        },
+                                                        "id": "4b80b745-df33-a594-de14-64fded4e962a",
+                                                        "pageElements": [
+                                                            {
+                                                                "definition": {
+                                                                    "fragment": {
+                                                                        "key": "link"
+                                                                    },
+                                                                    "fragmentConfig": {
+                                                                        "requiredCss": "dist/utility/utility.css,dist/component/link/link.css",
+                                                                        "color": "var(--brand-color-4)",
+                                                                        "underline": "fr-footer__top-link",
+                                                                        "linkSize": "",
+                                                                        "linkMode": "href=\"#\"",
+                                                                        "linkType": "",
+                                                                        "fontSize": "0.75rem",
+                                                                        "requiredJs": "",
+                                                                        "title": ""
+                                                                    },
+                                                                    "fragmentFields": [
+                                                                        {
+                                                                            "id": "01-link",
+                                                                            "value": {
+                                                                                "fragmentLink": {
+                                                                                    "value": {
+                                                                                        "href": {
+                                                                                            "value": "#"
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "text": {
+                                                                                    "value_i18n": {
+                                                                                        "en_US": "Accès aux documents administratifs"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "fragmentStyle": {
+                                                                        "paddingLeft": "2",
+                                                                        "paddingRight": "2"
+                                                                    },
+                                                                    "indexed": true
+                                                                },
+                                                                "id": "151dc704-3e87-3aba-1ec7-465d6fd9b5ce",
+                                                                "type": "Fragment"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentStyle": {
+                                                                        "backgroundColor": "gray300Color",
+                                                                        "height": "1rem",
+                                                                        "width": "1px"
+                                                                    },
+                                                                    "indexed": true,
+                                                                    "layout": {}
+                                                                },
+                                                                "id": "fd516180-8e65-8b67-ff96-262eeb51f49e",
+                                                                "type": "Section"
+                                                            }
+                                                        ],
+                                                        "type": "Section"
+                                                    }
+                                                ],
+                                                "type": "FragmentDropZone"
+                                            },
+                                            {
+                                                "definition": {
+                                                    "fragmentDropZoneId": "5"
+                                                },
+                                                "id": "3852b601-8b80-3218-182b-dbe5a4204881",
+                                                "pageElements": [
+                                                    {
+                                                        "definition": {
+                                                            "indexed": true,
+                                                            "layout": {
+                                                                "align": "Center",
+                                                                "contentDisplay": "FlexRow",
+                                                                "justify": "Center"
+                                                            }
+                                                        },
+                                                        "id": "2568d34e-1aa0-1db0-b4d4-ea011a1c1c0d",
+                                                        "pageElements": [
+                                                            {
+                                                                "definition": {
+                                                                    "fragment": {
+                                                                        "key": "link"
+                                                                    },
+                                                                    "fragmentConfig": {
+                                                                        "requiredCss": "dist/utility/utility.css,dist/component/link/link.css",
+                                                                        "color": "var(--brand-color-4)",
+                                                                        "underline": "fr-footer__top-link",
+                                                                        "linkSize": "",
+                                                                        "linkMode": "href=\"#\"",
+                                                                        "linkType": "",
+                                                                        "fontSize": "0.75rem",
+                                                                        "requiredJs": "",
+                                                                        "title": ""
+                                                                    },
+                                                                    "fragmentFields": [
+                                                                        {
+                                                                            "id": "01-link",
+                                                                            "value": {
+                                                                                "fragmentLink": {
+                                                                                    "value": {
+                                                                                        "href": {
+                                                                                            "value": "#"
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "text": {
+                                                                                    "value_i18n": {
+                                                                                        "en_US": "Nous contacter"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "fragmentStyle": {
+                                                                        "paddingLeft": "2",
+                                                                        "paddingRight": "2"
+                                                                    },
+                                                                    "indexed": true
+                                                                },
+                                                                "id": "e445d4c5-e870-5649-5e7b-9090f47a8bf6",
+                                                                "type": "Fragment"
+                                                            },
+                                                            {
+                                                                "definition": {
+                                                                    "fragmentStyle": {
+                                                                        "backgroundColor": "gray300Color",
+                                                                        "height": "1rem",
+                                                                        "width": "1px"
+                                                                    },
+                                                                    "indexed": true,
+                                                                    "layout": {}
+                                                                },
+                                                                "id": "1740b1f9-9425-2302-f9d1-5d38631a5986",
+                                                                "type": "Section"
+                                                            }
+                                                        ],
+                                                        "type": "Section"
+                                                    }
+                                                ],
+                                                "type": "FragmentDropZone"
+                                            }
+                                        ],
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Section"
+                            }
+                        ],
+                        "type": "Section"
+                    }
+                ],
+                "type": "Section"
+            }
+        ],
+        "type": "Root"
+    },
+    "settings": {
+        "colorSchemeName": "01",
+        "favIcon": {
+            "externalReferenceCode": "LXC:liferay-dsfr-theme-favicon",
+            "name": "Liferay DSFR Theme Favicon"
+        },
+        "globalJSClientExtensions": [
+            {
+                "clientExtensionConfig": {
+                    "loadType": "async",
+                    "scriptLocation": "bottom"
+                },
+                "externalReferenceCode": "LXC:liferay-dsfr-global-js",
+                "name": "Liferay DSFR Global JS"
+            }
+        ],
+        "themeCSSClientExtension": {
+            "externalReferenceCode": "LXC:liferay-dsfr",
+            "name": "Liferay DSFR Theme CSS"
+        },
+        "themeName": "Classic",
+        "themeSettings": {
+            "lfr-theme:regular:show-header-search": "false",
+            "lfr-theme:regular:show-header": "false",
+            "lfr-theme:regular:show-footer": "false",
+            "lfr-theme:regular:wrap-widget-page-content": "false"
+        }
+    },
+    "version": 1.1
+}

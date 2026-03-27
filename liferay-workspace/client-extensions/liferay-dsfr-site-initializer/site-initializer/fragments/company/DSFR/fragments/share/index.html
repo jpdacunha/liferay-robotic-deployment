@@ -1,0 +1,21 @@
+<div class="fr-share" id="share-${fragmentEntryLinkNamespace}">
+    <p class="fr-share__title">Partager la page</p>
+    <ul class="fr-btns-group">
+        <li>
+            <a data-lfr-editable-id="link1" data-lfr-editable-type="link" target="_blank" rel="noopener external" title="[À MODIFIER - Intitulé] - nouvelle fenêtre" id="share-7328" onclick="window.open(this.href,'Partager sur Facebook','toolbar=no,location=yes,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=450'); event.preventDefault();" [#if configuration.disabledLink1??] aria-disabled="true" role="link" [#else] href="https://www.facebook.com/sharer.php?u=[À MODIFIER - url de la page]" [/#if] class="fr-btn--facebook fr-btn">Partager sur Facebook</a>
+        </li>
+        <li>
+            <!-- Les paramètres de la reqûete doivent être URI-encodés (ex: encodeURIComponent() en js) -->
+            <a data-lfr-editable-id="link2" data-lfr-editable-type="link" target="_blank" rel="noopener external" title="[À MODIFIER - Intitulé] - nouvelle fenêtre" id="share-7329" onclick="window.open(this.href,'Partager sur X (anciennement Twitter)','toolbar=no,location=yes,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=420'); event.preventDefault();" [#if configuration.disabledLink2??] aria-disabled="true" role="link" [#else] href="https://twitter.com/intent/tweet?url=[À MODIFIER - url de la page]&text=[À MODIFIER - titre ou texte descriptif de la page]&via=[À MODIFIER - via]&hashtags=[À MODIFIER - hashtags]" [/#if] class="fr-btn--twitter-x fr-btn">Partager sur X (anciennement Twitter)</a>
+        </li>
+        <li>
+            <a data-lfr-editable-id="link3" data-lfr-editable-type="link" target="_blank" rel="noopener external" title="[À MODIFIER - Intitulé] - nouvelle fenêtre" id="share-7330" onclick="window.open(this.href,'Partager sur LinkedIn','toolbar=no,location=yes,status=no,menubar=no,scrollbars=yes,resizable=yes,width=550,height=550'); event.preventDefault();" [#if configuration.disabledLink3??] aria-disabled="true" role="link" [#else] href="https://www.linkedin.com/shareArticle?url=[À MODIFIER - url de la page]&title=[À MODIFIER - titre ou texte descriptif de la page]" [/#if] class="fr-btn--linkedin fr-btn">Partager sur LinkedIn</a>
+        </li>
+        <li>
+            <a data-lfr-editable-id="link4" data-lfr-editable-type="link" target="_blank" rel="noopener external" title="[À MODIFIER - Intitulé] - nouvelle fenêtre" id="share-7331" href="mailto:?subject=[À MODIFIER - objet du mail]&body=[À MODIFIER - titre ou texte descriptif de la page] [À MODIFIER - url de la page]" class="fr-btn--mail fr-btn">Partager par email</a>
+        </li>
+        <li>
+            <button id="share-7332" onclick="navigator.clipboard.writeText(window.location).then(function() {alert('Adresse copiée dans le presse papier.')});" class="fr-btn--copy fr-btn">Copier dans le presse-papier</button>
+        </li>
+    </ul>
+</div>

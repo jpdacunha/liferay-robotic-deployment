@@ -1,0 +1,149 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/utility/utility.css,dist/component/badge/badge.css,dist/component/tile/tile.css,dist/component/tag/tag.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},
+		{
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "badge fr-badge--purple-glycine",
+					"label": "Tile Type",
+					"name": "tileType",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Tile with badge",
+								"value": "badge fr-badge--purple-glycine"
+							},
+							{
+								"label": "Tile with tag",
+								"value": "tag"
+							},
+							{
+								"label": "Tile with detail",
+								"value": "detail"
+							},
+							{
+								"label": "Download tile",
+								"value": "download"
+							},
+							{
+								"label": "Simple tile",
+								"value": "simple"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Tile Size",
+					"name": "tileSize",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Normal",
+								"value": ""
+							},
+							{
+								"label": "Small",
+								"value": "fr-tile--sm"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "image",
+					"label": "Image Selection",
+					"name": "imageSelection",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "With image",
+								"value": "image"
+							},
+							{
+								"label": "Custom image",
+								"value": "customImage"
+							},
+							{
+								"label": "Without image",
+								"value": "noImage"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Tile Appearance",
+					"name": "tileAppearance",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Default",
+								"value": ""
+							},
+							{
+								"label": "variation accentuated in contrast grey",
+								"value": "fr-tile--grey"
+							},
+							{
+								"label": "variation without border",
+								"value": "fr-tile--no-border"
+							},
+							{
+								"label": "variation without background",
+								"value": "fr-tile--no-background"
+							},
+							{
+								"label": "tile drop shadow",
+								"value": "fr-tile--shadow"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Tile Mode",
+					"name": "tileMode",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Enabled",
+								"value": ""
+							},
+							{
+								"label": "Disabled",
+								"value": "disabled"
+							}
+						]
+					}
+				}
+			],
+			"label": "tile-options"
+		}
+	]
+}

@@ -1,0 +1,59 @@
+<div class="fr-tile ${configuration.tileSize} ${configuration.tileAppearance} [#if configuration.tileType == 'download'] fr-tile--download [/#if] fr-enlarge-link"
+	id="tile-8184">
+	<div class="fr-tile__body">
+		<div class="fr-tile__content">
+			<h3 class="fr-tile__title">
+				<a [#if configuration.tileMode='disabled' ] aria-disabled="true" role="link" [#else] [#if
+					configuration.tileType='download' ] ${configuration.tileType} [/#if] data-lfr-editable-id="title"
+					data-lfr-editable-type="link" href="[url - à modifier]" [/#if]>Intitulé de la tuile</a>
+
+			</h3>
+			[#if configuration.tileType == "detail"]
+				<p data-lfr-editable-id="tile-detail" data-lfr-editable-type="rich-text" class="fr-tile__detail">Détail
+					(optionel)</p>
+			[#else]
+				[#if configuration.tileType == "simple"]
+				[#else]
+					<p data-lfr-editable-id="tile-content" data-lfr-editable-type="rich-text" class="fr-tile__desc">Lorem [...]
+						elit ut.</p>
+					[#if configuration.tileType == "download"]
+						<p data-lfr-editable-id="title-detail" data-lfr-editable-type="rich-text" class="fr-tile__detail">Détail
+							obligatoire (Extension - Poids - Langue)</p>
+					[#else]
+						<div class="fr-tile__start">
+							<p data-lfr-editable-id="badge-or-tag-label" data-lfr-editable-type="rich-text"
+								class="fr-${configuration.tileType}">Libellé badge</p>
+						</div>
+					[/#if]
+				[/#if]
+			[/#if]
+
+
+		</div>
+	</div>
+	[#if configuration.imageSelection == "image"]
+	<div class="fr-tile__header">
+		<div class="fr-tile__pictogram">
+			<svg aria-hidden="true" class="fr-artwork" viewBox="0 0 80 80" width="80px" height="80px">
+				[#if configuration.tileType == "download"]
+				<use class="fr-artwork-decorative" href="[resources:document-download]#artwork-decorative"></use>
+				<use class="fr-artwork-minor" href="[resources:document-download]#artwork-minor"></use>
+				<use class="fr-artwork-major" href="[resources:document-download]#artwork-major"></use>
+				[#else]
+				<use class="fr-artwork-decorative" href="[resources:city-hall]#artwork-decorative"></use>
+				<use class="fr-artwork-minor" href="[resources:city-hall]#artwork-minor"></use>
+				<use class="fr-artwork-major" href="[resources:city-hall]#artwork-major"></use>
+				[/#if]
+			</svg>
+		</div>
+	</div>
+	[/#if]
+	[#if configuration.imageSelection == "customImage"]
+	<div class="fr-tile__header">
+		<div class="fr-tile__pictogram">
+			<img alt="" class="fr-responsive-img" data-lfr-editable-id="image-square" data-lfr-editable-type="image" src="" />
+		</div>
+	</div>
+	[/#if]
+	
+</div>

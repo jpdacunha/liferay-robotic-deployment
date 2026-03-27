@@ -1,0 +1,55 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "",
+					"label": "required-js",
+					"name": "requiredJs",
+					"type": "text"
+				},
+				{
+					"defaultValue": "dist/component/logo/logo.css",
+					"label": "required-css",
+					"name": "requiredCss",
+					"type": "text"
+				}
+			],
+			"label": "required-js"
+		},{   
+	      "fields": [
+		      {
+					   "dataType": "string",
+					   "defaultValue": "",
+					   "label": "Logo Size",
+					   "name": "logoSize",
+					   "type": "select",
+					   "typeOptions": {
+						   "validValues": [
+							    {
+										"label": "Default",
+								    "value": ""
+								    
+							    },
+								  {
+								     "label": "Large",
+								     "value": "fr-logo--lg"
+							    },
+								  {
+								     "label": "Small",
+								     "value": "fr-logo--sm"
+							    }
+						     ]
+					}
+				 },
+				{
+                    "defaultValue": "1rem",
+                    "label": "size",
+                    "name": "size",
+                    "type": "length"
+                }
+		  ],
+				"label": "Logo-options"
+			}
+	]
+}

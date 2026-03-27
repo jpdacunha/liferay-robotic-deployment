@@ -1,0 +1,12 @@
+<figure role="group" class="fr-content-media ${configuration.contentSize}" id="media-${fragmentEntryLinkNamespace}" aria-label="Description / Source">
+    <div class="fr-content-media__img">
+        <img class="fr-responsive-img fr-ratio-${configuration.contentRatio}" data-lfr-editable-id="image-square" data-lfr-editable-type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABECAYAAABK3PEEAAAACXBIWXMAAC4jAAAuIwF4pT92AAABBUlEQVR4Xu3VAQkAIBDFUO0fRLCD2RSM8dg12Mbn5trnjo41MAvMtv1gBbb7FhjvW+AC6wZwvn5wgXEDOF4LLjBuAMdrwQXGDeB4LbjAuAEcrwUXGDeA47XgAuMGcLwWXGDcAI7XgguMG8DxWnCBcQM4XgsuMG4Ax2vBBcYN4HgtuMC4ARyvBRcYN4DjteAC4wZwvBZcYNwAjteCC4wbwPFacIFxAzheCy4wbgDHa8EFxg3geC24wLgBHK8FFxg3gOO14ALjBnC8Flxg3ACO14ILjBvA8VpwgXEDOF4LLjBuAMdrwQXGDeB4LbjAuAEcrwUXGDeA47XgAuMGcLwWXGDcAI73ADVez7kdh2y/AAAAAElFTkSuQmCC"/>
+        <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
+    </div>
+    [#if configuration.figcaption]
+    <figcaption class="fr-content-media__caption">
+        Description / Source
+        <a href="[url - à modifier]" class="fr-link">Libellé lien</a>
+    </figcaption>
+    [/#if]
+</figure>
