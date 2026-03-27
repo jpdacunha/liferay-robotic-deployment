@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
-  await page.goto('http://rd-liferay:8080/');
+  await page.goto('http://localhost:8080/');
   await page.getByRole('button', { name: 'Sign In' }).click();
   await page.getByRole('textbox', { name: 'Screen Name' }).click();
-  await page.getByRole('textbox', { name: 'Screen Name' }).fill('test');
+  await page.getByRole('textbox', { name: 'Screen Name' }).fill('superadmin');
   await page.getByRole('textbox', { name: 'Password' }).click();
-  await page.getByRole('textbox', { name: 'Password' }).fill('admin');
+  await page.getByRole('textbox', { name: 'Password' }).fill('test');
   await page.getByLabel('Sign In- Loading').getByRole('button', { name: 'Sign In' }).click();
   await page.getByRole('button', { name: 'Open Applications Menu Ctrl' }).click();
   await page.getByRole('tab', { name: 'Control Panel' }).click();
