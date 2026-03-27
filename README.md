@@ -1,161 +1,178 @@
-# 🎯 Contexte et besoin
+# Liferay Robotic Deployment
 
-## 📌 Description du besoin
-
-Le projet consiste à **enregistrer des scénarios utilisateurs sur une application web** (Liferay DXP dans notre cas) puis à **rejouer automatiquement ces scénarios sur plusieurs environnements identiques** (DEV, INT, REC, PROD), ou sur d'autres sites d'un même environnement.
-
-Un scénario correspond à une suite d’actions réalisées dans le navigateur :
-- Navigation entre pages
-- Clics sur des boutons / menus
-- Saisie de formulaires (login, création de contenu, etc.)
-- Interactions avancées (iframes, drag & drop, menus dynamiques)
-
-L’objectif principal n’est **pas un test fonctionnel**, mais surtout :
-- La **reproductibilité des parcours métiers**
-- La **validation rapide après déploiement**
-- La possibilité de **record & playback** pour accélérer la création des scénarios
+Liferay Robotic Deployment automates the creation of content on a Liferay site by **recording user scenarios** (Liferay DXP in our case) and **replaying them on multiple identical environments** (DEV, INT, REC, PROD), or on other sites within the same environment. Its objective is to address gaps in Liferay's native import/export capabilities by replacing traditionally manual operations with RPA-style automation scripts.
 
 ---
 
-## 🧩 Contraintes techniques issues du contexte
+## Before Starting: Required Installs
 
-- Application web moderne (SPA, JavaScript, iframes)
-- Utilisation de **Liferay** (DOM dynamique, Shadow DOM, iframes, drag & drop)
-- Exécution dans des **environnements Docker**
-- Scénarios rejoués sur plusieurs URLs (via variable `BASE_URL`)
-- Besoin d’un outil **maintenable**, lisible et évolutif
+### 1) Install Java 17 (WSL)
 
----
+Java 17 is required for WSL. Later versions are not compatible and earlier versions are untested.
 
-# 🛠️ Outils étudiés
+```sh
+sudo apt update
+sudo apt install openjdk-17-jdk
+```
 
-Les trois outils suivants sont comparés :
-- **Playwright**
-- **Selenium (IDE / WebDriver)**
-- **Robot Framework**
+### 2) Select the OpenJDK 17 alternative
 
-Le comparatif est réalisé en tenant compte du **record & playback**, de la facilité d’usage et de l’adéquation avec le besoin.
+```sh
+update-alternatives --config java
+```
 
----
+- Select the JDK 17 alternative if multiple entries are available.
+- Verify the switch succeeded (this can fail when another JDK is already installed).
+- If it did not switch and you do not need other JDKs, reinstall OpenJDK 17:
 
-# 📊 Tableau comparatif global
+```sh
+sudo apt remove --purge openjdk-* -y
+sudo apt autoremove -y
+sudo apt update
+sudo apt install openjdk-17-jdk -y
+```
 
-| Critère | Playwright | Selenium | Robot Framework |
-|------|-----------|----------|-----------------|
-| Langages supportés | JS / TS / Python / Java / C# | Multi-langages | Python / mots-clés |
-| Record & Playback | ✅ Playwright Codegen | ⚠️ Selenium IDE uniquement | ❌ Pas natif |
-| Qualité du code généré | ⭐⭐⭐⭐ | ⭐⭐ | ❌ |
-| Support SPA / JS moderne | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| Gestion iframes / Shadow DOM | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
-| Drag & Drop | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
-| Stabilité des tests | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| Vitesse d’exécution | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| Installation Docker | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| Maintenance long terme | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| Courbe d’apprentissage | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+### 3) Set JAVA_HOME
 
----
+```sh
+echo "export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> ~/.bashrc
+echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> ~/.bashrc
+source ~/.bashrc
+```
 
-# 🎥 Focus : Record & Playback
+### 4) Install Docker (WSL)
 
-## ▶️ Playwright
+```sh
+docker -version
+docker ps
+```
 
-- Outil natif : **Playwright Codegen**
-- Enregistrement en temps réel via navigateur Chromium / Firefox / WebKit
-- Génère du **code propre et maintenable** (`test()`, `locator`, `getByRole`)
-- Le scénario enregistré peut être :
-  - Nettoyé
-  - Paramétré (`BASE_URL`, données dynamiques)
-  - Réutilisé sur plusieurs environnements
+### 5) Give execute permissions to scripts
 
-👉 Très adapté à notre besoin.
+```sh
+cd liferay-robotic-deployment
+chmod +x manage.sh
+```
 
----
+### 6) Ensure Gradle wrapper is executable
 
-## ▶️ Selenium
-
-- Outil principal : **Selenium IDE** (extension navigateur)
-- Enregistrement possible mais :
-  - Code peu maintenable
-  - Peu robuste sur DOM dynamique
-  - Mauvaise gestion des iframes et SPA
-
-👉 Acceptable pour des démos simples, **peu fiable pour Liferay**.
+```sh
+cd liferay-workspace
+ls -l gradlew
+chmod +x gradlew
+./gradlew build
+```
 
 ---
 
-## ▶️ Robot Framework
+## Quick Start
 
-- Pas de record & playback natif
-- Les scénarios sont écrits manuellement sous forme de mots-clés
-- Très lisible pour des profils non développeurs
+Follow these steps to get started with Liferay Robotic Deployment:
 
-👉 Excellent pour tests fonctionnels structurés, **moins adapté à l’enregistrement de parcours complexes**.
+All project operations must be executed through `manage.sh` only.
 
----
+### 0. Script documentation (required)
 
-# ✅ Avantages et inconvénients par outil
+Use this command to display all available commands and categories:
 
-## 🟢 Playwright
+```sh
+manage.sh help
+```
 
-**Avantages**
-- Enregistrement automatique (Codegen)
-- Très robuste sur applications modernes
-- Excellente gestion des iframes, SPA, drag & drop
-- Rapide, stable, bien maintenu
-- Idéal pour Docker & CI/CD
+### 1. Build the workspace plugins
 
-**Inconvénients**
-- Nécessite des bases en JavaScript / TypeScript
-- Record & playback = point de départ, pas une finalité
+```sh
+./manage.sh build build
+```
 
----
+### 2. Deploy the built artifacts to the runtime bundle
 
-## 🟠 Selenium
+```sh
+./manage.sh build deploy
+```
 
-**Avantages**
-- Historique et très répandu
-- Multi-langages
+### 3. Start the dockerized environment
 
-**Inconvénients**
-- Selenium IDE limité
-- Tests fragiles
-- Maintenance coûteuse
-- Moins adapté aux applications modernes
+Requires Docker Compose and sudo:
 
----
+```sh
+./manage.sh runtime start
+```
 
-## 🔵 Robot Framework
+### 4. Stop the environment when done
 
-**Avantages**
-- Syntaxe lisible
-- Très utilisé en QA fonctionnel
-- Facile à lire par des non-développeurs
-
-**Inconvénients**
-- Pas de vrai record & playback
-- Moins flexible pour interactions complexes
-- Couche supplémentaire au-dessus de Selenium
+```sh
+./manage.sh runtime stop
+```
 
 ---
 
-# 🏁 Conclusion
+## Access and Credentials
 
-## 🎯 Outil le plus adapté au besoin
+Liferay runs at: **http://localhost:8080/**
 
-### ✅ **Playwright** est clairement le meilleur choix
+### Default Credentials
 
-**Pourquoi ?**
-- Il répond **nativement** au besoin de **record & playback** via Codegen
-- Il est parfaitement adapté aux **applications modernes comme Liferay**
-- Il permet de transformer rapidement un scénario enregistré en **test robuste, maintenable et paramétrable**
-- Il s’intègre naturellement avec **Docker et CI/CD**
-
-👉 **Conclusion finale** :
-
->On utilisera **Playwright + Codegen** pour enregistrer les scénarios, puis les structurer comme des tests E2E réutilisables sur tous les environnements.
+- **Username:** `superadmin`
+- **Password:** `test`
 
 ---
 
-📌 *Selenium peut être envisagé pour des contextes legacy, Robot Framework pour des équipes QA très orientées métier, mais pour notre besoin précis, Playwright est le choix le plus pertinent et durable.*
+## Playwright: Recording and Replaying User Scenarios
+
+Playwright enables you to **record user scenarios** through the browser and **replay scenarios** on multiple identical environments without installing Playwright locally (via Docker).
+
+### Prerequisites
+
+- Docker
+- Docker Compose
+- Linux with X server
+
+### Setup
+
+Allow Docker to display the UI:
+
+```bash
+xhost +local:
+```
+
+### Recording a Scenario
+
+Record a Liferay scenario from your host machine using `manage.sh`:
+
+```bash
+./manage.sh playwright record
+```
+
+This script automatically:
+- Installs system dependencies
+- Installs npm dependencies  
+- Installs Playwright browsers
+- Starts Playwright codegen on `http://localhost:8080`
+
+**Note:** Wait until Liferay is fully started before running the script.
+
+### Exporting the Recorded Scenario
+
+Copy the generated code from the Playwright Inspector into `tests/*.spec.ts`
+
+### Replaying Tests on an Environment
+
+Run your recorded scenarios on any environment using `manage.sh`:
+
+```bash
+./manage.sh playwright run
+```
+
+This script:
+- Verifies npm dependencies are installed
+- Executes all tests in `tests/` directory
+- Displays test results
+- Generates detailed reports in `test-results/`
+
+---
+
+## Documentation
+
+- [docs/TOOL-EVALUATION.md](docs/TOOL-EVALUATION.md) - Tool comparison and rationale for choosing Playwright.
 

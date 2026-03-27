@@ -1,3 +1,4 @@
+name: "liferay-robotic-deployment"
 services:
   rd-liferay:
     hostname: rd-liferay
@@ -5,19 +6,20 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./liferay/files:/mnt/liferay/files
-      - ./liferay/deploy:/mnt/liferay/deploy
+      - ./liferay:/mnt/liferay
       - rd_liferay_data:/opt/liferay/data
+      - rd_liferay-osgi-configs:/opt/liferay/osgi/configs
+      - rd_liferay-osgi-marketplace:/opt/liferay/osgi/marketplace
+      - rd_liferay-osgi-modules:/opt/liferay/osgi/modules
+      - rd_liferay-osgi-war:/opt/liferay/osgi/war  
+      - rd-liferay-tools:/opt/liferay/tools
     depends_on:
       rd-database:
         condition: service_healthy
       rd-elasticsearch:
         condition: service_healthy
     environment:
-      LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC LASS: org.postgresql.Driver
-      LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL: jdbc:postgresql://rd-database:5432/lportal
-      LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME: liferay
-      LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD: liferay
+      LIFERAY_DISABLE_TRIAL_LICENSE: true
     networks: 
       - rd-network    
 
@@ -54,15 +56,16 @@ services:
     hostname: rd-database
     image: postgres:15
     environment:
-      POSTGRES_DB: lportal
+      POSTGRES_DB: rdlportal
       POSTGRES_USER: liferay
       POSTGRES_PASSWORD: liferay
     ports:
       - 5432:5432
     volumes:
       - rd_database_data:/var/lib/postgresql/data
+      - ./postgresql/initdb:/docker-entrypoint-initdb.d
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U liferay -d lportal"]
+      test: ["CMD-SHELL", "pg_isready -U liferay -d rdlportal"]
       interval: 5s
       timeout: 2s
       retries: 5
@@ -90,6 +93,11 @@ services:
         
 volumes:
   rd_liferay_data:
+  rd_liferay-osgi-configs:
+  rd_liferay-osgi-marketplace:
+  rd_liferay-osgi-modules:
+  rd_liferay-osgi-war:
+  rd-liferay-tools:
   rd_elasticsearch_data:
   rd_database_data:
 

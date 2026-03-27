@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<Context crossContext="true">
+
+	<JarScanner className="com.liferay.support.tomcat.util.scan.NOPJarScanner"/>
+
+	<!-- JAAS -->
+
+	<!--<RealmclassName="org.apache.catalina.realm.JAASRealm"appName="PortalRealm"userClassNames="com.liferay.portal.kernel.security.jaas.PortalPrincipal"roleClassNames="com.liferay.portal.kernel.security.jaas.PortalRole"/>-->
+
+	<!-- MYSQL DATASOURCE -->
+	<Resource 
+		name="jdbc/LiferayPool" 
+		auth="Container" 
+		type="javax.sql.DataSource" 
+		driverClassName="org.postgresql.Driver" 
+		url="jdbc:postgresql://rd-database:5432/rdlportal" 
+		username="liferay" 
+		password="liferay" 
+		maxActive="20"
+		validationQuery="Select 1" 
+	/>
+
+</Context>
